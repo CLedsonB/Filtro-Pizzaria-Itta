@@ -1,52 +1,60 @@
-window.onload = (Event) => {
-    var dados = json['sabores']
-    preencherTable(dados);
-}
+window.onload = () => {
+  // suponha que "dados" já esteja disponível (ex.: via fetch)
+  const lanches = [
+    json['salgados'],
+    json['doces'],
+    json['rolls'],
+    json['sweetRolls'],
+    json['finger']
+  ];
 
-function preencherTable(dado) {
-    var caixaConteudo = document.querySelector('#tabelaDados')
-    for (var i = 0; i <= dado.length; i++) {
-        const meuTr = document.createElement('tr');
-        const meuTd1 = document.createElement('td');
-        const meuTd2 = document.createElement('td');
-        
-        meuTd1.textContent = dado[i].sabor;
-        meuTd2.textContent = dado[i].ingredientes;
-       
-       caixaConteudo.appendChild(meuTr);
-       meuTr.appendChild(meuTd1);
-       meuTr.appendChild(meuTd2);
+  const tabelas = [
+    document.querySelector('#tabelaPizzaSalgada'),
+    document.querySelector('#tabelaPizzaDoce'),
+    document.querySelector('#tabelaRoll'),
+    document.querySelector('#tabelaSweetRoll'),
+    document.querySelector('#tabelaFinger')
+  ];
+
+  preencherTable(lanches, tabelas);
+  iniciarFiltro();
+};
+
+function preencherTable(dados, tabelas) {
+  for (let i = 0; i < tabelas.length; i++) {
+    const tabela = tabelas[i];
+    const categoria = dados[i] || [];   // se a categoria estiver vazia, usa array vazio
+
+    for (let j = 0; j < categoria.length; j++) {
+      const item = categoria[j];
+      const tr = document.createElement('tr');
+      const tdSabor = document.createElement('td');
+      const tdIngred = document.createElement('td');
+
+      tdSabor.textContent = item.sabor;
+      tdIngred.textContent = item.ingredientes;
+
+      tr.appendChild(tdSabor);
+      tr.appendChild(tdIngred);
+      tabela.appendChild(tr);
     }
-}
-
-
-
-
-
-const buscaInput = document.querySelector('#entrada');
-const botaoPesquisa = document.querySelector('#pesquisar');
-
-const filtrarLista = (valorInput, lista) => lista.filter( item => criterio(item, valorInput))
-const criterio = (item, valorInput) => item.ingredientes.includes(valorInput)
-
-const esconderLista = (listaDeDados, valorInput) => {
-  listaDeDados
-  .forEach(lista => {
-    lista.setAttribute('style', 'display:none');
-  })
-}
-
-const mostrarLista = (listaDeDados, valorInput) => {
- const listaFiltrada = filtrarLista(valorInput, listaDeDados)
-  preencherTable(listaFiltrada)
-}
-
- botaoPesquisa.addEventListener('click', event => {
-   const valorInput = buscaInput.value.trim().toLowerCase();
-   const listaDeDivs = Array.from(document.querySelectorAll('tr'));
-   const listaManga = json['sabores']
-
-   esconderLista(listaDeDivs, valorInput);
-   mostrarLista(listaManga, valorInput);
   }
-)
+}
+function iniciarFiltro() {
+  const buscaInput = document.querySelector('#entrada');
+  const botaoPesquisa = document.querySelector('#pesquisar');
+  botaoPesquisa.addEventListener('click', () => {
+    const termo = buscaInput.value.trim().toLowerCase();                                                 
+    const todasLinhas = document.querySelectorAll('table tr');
+    todasLinhas.forEach(linha => {
+      const ingredienteCell = linha.cells[1];                                 
+      const ingredientes = ingredienteCell.textContent.toLowerCase();
+
+      if (ingredientes.includes(termo)) {
+        linha.style.display = '';                   
+      } else {
+        linha.style.display = 'none';      // esconde
+      }
+    });
+  });
+}
