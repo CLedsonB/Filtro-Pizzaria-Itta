@@ -1,5 +1,5 @@
 var json = {
-    sabores : [
+    salgados : [
     {
 "sabor" : "alho e oleo",
 "ingredientes" : ["molho de tomate", "queijo mussarela","alho frito", "orégano"]
@@ -130,5 +130,104 @@ var json = {
 "sabor" : "três queijos",
 "ingredientes" : ["molho de tomate", "queijo mussarela", "queijo gorgonzola", "queijo parmesão", "catupiry"]
     }
+  ],
+  doces : [
+    {
+"sabor" : "banoffee",
+"ingredientes" : ["queijo mussarela","banana fatiada", "chocolate branco", "doce de leite", "canela em pó"]
+    },{
+"sabor" : "cheesecake de banana",
+"ingredientes" : ["queijo mussarela", "cream cheese","chocolate branco", "banana fatiada"]
+    },{
+"sabor" : "cheesecake de morango",
+"ingredientes" : ["queijo mussarela", "cream cheese", "chocolate branco", "morango fatiado"]
+    },{
+"sabor" : "chocolate meio a meio",
+"ingredientes" : ["chocolate ao leite", "chocolate branco"]
+    },{
+"sabor" : "chocolate meio a meio com morango",
+"ingredientes" : ["chocolate ao leite", "chocolate branco", "morangos fatiados"]
+    },{
+"sabor" : "creme de avelã com morango",
+"ingredientes" : ["creme de avelã", "morango fatiado"]
+    },{
+"sabor" : "creme de avelã com oreo",
+"ingredientes" : ["creme de avelã", "oreo"]
+    },{
+"sabor" : "la delicitta rossa",
+"ingredientes" : ["queijo mussarela", "queijo brie", "geleia de amora","biscoito amanteigado"]
+    },{
+"sabor" : "romeu e julieta",
+"ingredientes" : ["queijo mussarela","goiabada"]
+    }
+  ],
+  rolls : [
+    {
+"sabor" : "bacon especial",
+"ingredientes" : ["queijo mussarela","bacon","cebola roxa","tomate picado","catupiry","azeitona preta","orégano"]
+    },{
+"sabor" : "calabresa com catupiry",
+"ingredientes" : ["queijo mussarela","calabresa fatiada","catupiry","orégano"]
+       },{
+"sabor" : "calabresitta",
+"ingredientes" : ["queijo mussarela","calabresa fatiada","manjericão", "alho frito", "cebola roxa","orégano"]
+    },{
+"sabor" : "caprese",
+"ingredientes" : ["queijo mussarela", "tomate picado", "manjericão", "orégano"]
+    },{
+"sabor" : "frango com catupiry",
+"ingredientes" : ["queijo mussarela", "frango", "catupiry", "orégano"]
+    },{
+"sabor" : "gramute",
+"ingredientes" : ["queijo mussarela", "presunto", "champignon", "queijo gorgonzola", "orégano"]
+    },{
+"sabor" : "imperial",
+"ingredientes" : ["queijo mussarela", "peito de peru", "geleia de amora", "manjericão"]
+    },{
+"sabor" : "pepperoni com queijo",
+"ingredientes" : ["queijo mussarela", "peperoni", "orégano"]
+    },{
+"sabor" : "quatro queijos",
+"ingredientes" : ["queijo mussarela", "queijo provolone", "queijo gorgonzola", "catupiry"]
+    }
+  ],
+  sweetRolls : [
+    {
+"sabor" : "banana com doce de leite",
+"ingredientes" : ["queijo mussarela", "banana fatiada", "doce de leite"]
+    },{
+"sabor" : "chocolate",
+"ingredientes" : ["queijo mussarela", "chocolate ao leite"]
+    },{
+"sabor" : "creme de avelã com oreo",
+"ingredientes" : ["queijo mussarela", "creme de avelã", "oreo"]
+    },{
+"sabor" : "creme de avelã com banana",
+"ingredientes" : ["queijo mussarela", "banana fatiada", "creme de avelã"]
+    },{
+"sabor" : "Romeu e Julieta especial",
+"ingredientes" : ["queijo mussarela", "goiabada", "cream cheese"]
+    }
+  ],
+  finger : [
+    {
+"sabor" : "calabresa com catupiry",
+"ingredientes" : ["queijo mussarela", "calabresa fatiada", "catupiry", "orégano"]
+    },{
+"sabor" : "calabresitta",
+"ingredientes" : ["queijo mussarela", "calabresa fatiada", "cebola roxa", "queijo parmesão", "manjericão", "alho frito", "orégano"]
+    },{
+"sabor" : "caprese",
+"ingredientes" : ["queijo mussarela", "tomate picado", "manjericão", "orégano"]
+    },{
+"sabor" : "frango com catupiry",
+"ingredientes" : ["queijo mussarela","frango","catupiry", "orégano"]
+    },{
+"sabor" : "imperial",
+"ingredientes" : ["queijo mussarela","peito de peru","manjericão","geleia de amora"]
+    },{
+"sabor" : "quatro queijos",
+"ingredientes" : ["queijo mussarela","queijo gorgonzola","queijo provolone","catupiry","orégano"]
+    }
   ]
-}
+                  }
