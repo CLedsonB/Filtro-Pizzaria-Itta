@@ -58,3 +58,9 @@ function iniciarFiltro() {
     });
   });
 }
+
+const btn = document.getElementById('opc');
+
+btn.addEventListener('click', () => {
+    btn.textContent = (btn.textContent === 'Com') ? 'Sem' : 'Com';
+  });
